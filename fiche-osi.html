@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fiche 2 — Modèles OSI et TCP/IP</title><style>:root{--bg:#fff;--fg:#1a1d23;--bd:#d9dde3;--card:#f5f7fa;--ac:#1f4fd8}@media(prefers-color-scheme:dark){:root{--bg:#14171c;--fg:#e8eaed;--bd:#2c323b;--card:#1c2027;--ac:#7ea2ff}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans-serif}main{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid var(--bd);padding:6px 10px;text-align:left}th{background:var(--card)}a{color:var(--ac)}
+code{background:var(--card);padding:1px 5px;border-radius:4px}.box{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;margin:16px 0}@media print{a{color:inherit}}</style></head><body><main>
+<h1>Fiche 2 — Modèles OSI et TCP/IP</h1>
+<table><tr><th>Couche OSI</th><th>Nom</th><th>Exemples</th><th>Couche TCP/IP</th></tr>
+<tr><td>7</td><td>Application</td><td>HTTP, DNS, SMTP</td><td rowspan="3">Application</td></tr>
+<tr><td>6</td><td>Présentation</td><td>Chiffrement, encodage</td></tr><tr><td>5</td><td>Session</td><td>Ouverture et suivi de sessions</td></tr>
+<tr><td>4</td><td>Transport</td><td>TCP, UDP</td><td>Transport</td></tr>
+<tr><td>3</td><td>Réseau</td><td>IP, ICMP, routage</td><td>Internet</td></tr>
+<tr><td>2</td><td>Liaison de données</td><td>Ethernet, adresses MAC, commutateurs</td><td rowspan="2">Accès réseau</td></tr>
+<tr><td>1</td><td>Physique</td><td>Câbles, signaux, Wi-Fi radio</td></tr></table>
+<div class="box"><strong>Mémo :</strong> en comptant de 7 à 1 : Application, Présentation, Session, Transport, Réseau, Liaison, Physique. Un routeur travaille surtout en couche 3, un commutateur (switch) en couche 2.</div>
+<p><strong>TCP</strong> : connexion, accusés de réception, retransmission. <strong>UDP</strong> : sans connexion, sans garantie de livraison, plus léger.</p><p><a href="index.html">← Retour au sommaire</a></p></main></body></html>

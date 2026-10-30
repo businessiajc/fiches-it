@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fiche 3 — Sous-réseaux et notation CIDR</title><style>:root{--bg:#fff;--fg:#1a1d23;--bd:#d9dde3;--card:#f5f7fa;--ac:#1f4fd8}@media(prefers-color-scheme:dark){:root{--bg:#14171c;--fg:#e8eaed;--bd:#2c323b;--card:#1c2027;--ac:#7ea2ff}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans-serif}main{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid var(--bd);padding:6px 10px;text-align:left}th{background:var(--card)}a{color:var(--ac)}
+code{background:var(--card);padding:1px 5px;border-radius:4px}.box{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;margin:16px 0}@media print{a{color:inherit}}</style></head><body><main>
+<h1>Fiche 3 — Sous-réseaux et notation CIDR</h1>
+<table><tr><th>CIDR</th><th>Masque</th><th>Adresses</th><th>Hôtes utilisables*</th></tr>
+<tr><td>/8</td><td>255.0.0.0</td><td>16 777 216</td><td>16 777 214</td></tr>
+<tr><td>/16</td><td>255.255.0.0</td><td>65 536</td><td>65 534</td></tr>
+<tr><td>/24</td><td>255.255.255.0</td><td>256</td><td>254</td></tr>
+<tr><td>/25</td><td>255.255.255.128</td><td>128</td><td>126</td></tr>
+<tr><td>/26</td><td>255.255.255.192</td><td>64</td><td>62</td></tr>
+<tr><td>/27</td><td>255.255.255.224</td><td>32</td><td>30</td></tr>
+<tr><td>/28</td><td>255.255.255.240</td><td>16</td><td>14</td></tr>
+<tr><td>/29</td><td>255.255.255.248</td><td>8</td><td>6</td></tr>
+<tr><td>/30</td><td>255.255.255.252</td><td>4</td><td>2</td></tr></table>
+<p>*On retire l'adresse de réseau et l'adresse de diffusion (broadcast).</p>
+<div class="box"><strong>Formule :</strong> nombre d'adresses = 2<sup>(32 − préfixe)</sup>. Hôtes utilisables = adresses − 2.</div>
+<h3>Plages privées (RFC 1918)</h3>
+<ul><li><code>10.0.0.0/8</code></li><li><code>172.16.0.0/12</code> (de 172.16.0.0 à 172.31.255.255)</li><li><code>192.168.0.0/16</code></li></ul><p><a href="index.html">← Retour au sommaire</a></p></main></body></html>
