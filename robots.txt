@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://businessiajc.github.io/fiches-it/sitemap.xml
