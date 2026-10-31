@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fiche 4 — Commandes Linux essentielles</title><style>:root{--bg:#fff;--fg:#1a1d23;--bd:#d9dde3;--card:#f5f7fa;--ac:#1f4fd8}@media(prefers-color-scheme:dark){:root{--bg:#14171c;--fg:#e8eaed;--bd:#2c323b;--card:#1c2027;--ac:#7ea2ff}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans-serif}main{max-width:760px;margin:0 auto;padding:24px 16px 64px}
+table{border-collapse:collapse;width:100%;margin:12px 0}th,td{border:1px solid var(--bd);padding:6px 10px;text-align:left}th{background:var(--card)}a{color:var(--ac)}
+code{background:var(--card);padding:1px 5px;border-radius:4px}.box{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;margin:16px 0}@media print{a{color:inherit}}</style></head><body><main>
+<h1>Fiche 4 — Commandes Linux essentielles</h1>
+<p>Commandes de base pour s'orienter, lire les journaux et gérer les droits sur un système Linux.</p>
+<table><tr><th>Commande</th><th>Usage</th></tr>
+<tr><td><code>pwd</code></td><td>Afficher le dossier courant</td></tr>
+<tr><td><code>ls -la</code></td><td>Lister les fichiers, y compris cachés, avec détails</td></tr>
+<tr><td><code>cd /chemin</code></td><td>Changer de dossier</td></tr>
+<tr><td><code>cat fichier</code></td><td>Afficher le contenu d'un fichier</td></tr>
+<tr><td><code>grep -r "motif" .</code></td><td>Rechercher un motif dans les fichiers</td></tr>
+<tr><td><code>chmod 644 fichier</code></td><td>Droits rw-r--r-- (propriétaire lit/écrit, les autres lisent)</td></tr>
+<tr><td><code>chown user:group fichier</code></td><td>Changer propriétaire et groupe</td></tr>
+<tr><td><code>ps aux</code></td><td>Lister les processus en cours</td></tr>
+<tr><td><code>systemctl status service</code></td><td>État d'un service (systemd)</td></tr>
+<tr><td><code>journalctl -u service</code></td><td>Journaux d'un service</td></tr>
+<tr><td><code>tail -f /var/log/syslog</code></td><td>Suivre un fichier de log en direct</td></tr>
+<tr><td><code>sudo ss -tulpn</code></td><td>Ports ouverts et processus associés</td></tr>
+<tr><td><code>df -h</code></td><td>Espace disque utilisé/disponible</td></tr>
+<tr><td><code>crontab -l</code></td><td>Tâches planifiées de l'utilisateur courant</td></tr></table>
+<div class="box"><strong>Lecture des droits <code>chmod</code> :</strong> un chiffre = rwx en binaire (r=4, w=2, x=1). Exemple <code>750</code> = propriétaire rwx (7), groupe r-x (5), autres aucun droit (0).</div>
+<p><strong>Réflexe cyber :</strong> évitez <code>chmod 777</code> (tout le monde peut lire/écrire/exécuter) ; préférez le droit minimal nécessaire.</p>
+<p><a href="index.html">← Retour au sommaire</a></p></main></body></html>
