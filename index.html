@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fiches réseau et cybersécurité pour étudiants et alternants en informatique — Fiches réseau &amp; cyber</title>
-<meta name="description" content="Fiches de révision courtes et sourcées : ports, modèles OSI et TCP/IP, sous-réseaux CIDR, commandes Linux. À imprimer ou à garder sur mobile.">
+<title>Fiches de révision réseaux et cybersécurité par niveau d&#x27;études — Fiches réseau &amp; cyber</title>
+<meta name="description" content="Fiches de révision courtes et sourcées pour BTS, BUT, Bachelor et Master en informatique, réseaux et cybersécurité : ports, OSI et TCP/IP, CIDR, Linux.">
 <link rel="canonical" href="https://businessiajc.github.io/fiches-it/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='7' fill='%230b5d56'/%3E%3Crect x='8' y='6' width='12' height='16' rx='1.6' fill='none' stroke='%23fff' stroke-width='1.6'/%3E%3Cpath d='M11 11h6M11 14.2h6M11 17.4h3.5' stroke='%23fff' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E">
 <meta name="theme-color" content="#0b5d56">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="Fiches réseau &amp; cyber">
-<meta property="og:title" content="Fiches réseau et cybersécurité pour étudiants et alternants en informatique">
-<meta property="og:description" content="Fiches de révision courtes et sourcées : ports, modèles OSI et TCP/IP, sous-réseaux CIDR, commandes Linux. À imprimer ou à garder sur mobile.">
+<meta property="og:title" content="Fiches de révision réseaux et cybersécurité par niveau d&#x27;études">
+<meta property="og:description" content="Fiches de révision courtes et sourcées pour BTS, BUT, Bachelor et Master en informatique, réseaux et cybersécurité : ports, OSI et TCP/IP, CIDR, Linux.">
 <meta property="og:url" content="https://businessiajc.github.io/fiches-it/">
 <meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Fiches réseau et cybersécurité pour étudiants et alternants en informatique","description":"Fiches de révision courtes et sourcées : ports, modèles OSI et TCP/IP, sous-réseaux CIDR, commandes Linux. À imprimer ou à garder sur mobile.","inLanguage":"fr","author":{"@type":"Person","name":"Jarod Capella"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Fiches de révision réseaux et cybersécurité par niveau d'études","description":"Fiches de révision courtes et sourcées pour BTS, BUT, Bachelor et Master en informatique, réseaux et cybersécurité : ports, OSI et TCP/IP, CIDR, Linux.","inLanguage":"fr","author":{"@type":"Person","name":"Jarod Capella"}}</script>
 <style>
 /* Système de design commun — éditorial, sobre, lisible. Une seule couleur d'accent. */
 :root{
@@ -192,24 +192,41 @@ section.s.alt{background:var(--band)}
 .aside .card:first-child{border-top:4px solid var(--c2)}.aside .card.related{border-top:4px solid var(--c3)}
 .foot{border-top:4px solid var(--ac)}
 
+/* Niveaux d'études */
+.levels{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
+.tag{display:inline-block;font:700 .72rem/1 var(--sans);letter-spacing:.03em;padding:6px 10px;border-radius:999px;text-decoration:none;background:var(--ac-soft);color:var(--ac)}
+.tag.t2{background:var(--ac-soft);color:var(--ac)}.tag.t3{background:var(--c2-soft);color:var(--c2)}.tag.t5{background:var(--c3-soft);color:var(--c3)}
+a.tag:hover{filter:brightness(.95);text-decoration:none}
+.levnote{margin:2px 0 22px;font-size:.82rem}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-<header class="top"><div class="wrap"><a class="brand" href="index.html"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#0b5d56"/><rect x="8" y="6" width="12" height="16" rx="1.6" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M11 11h6M11 14.2h6M11 17.4h3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg><span>Fiches réseau &amp; cyber</span><small>par Jarod Capella</small></a><nav class="nav" aria-label="Navigation principale"><a href="index.html" aria-current="page">Toutes les fiches</a><a href="fiche-ports.html">Ports</a><a href="fiche-osi.html">OSI / TCP-IP</a><a href="fiche-cidr.html">CIDR</a><a href="fiche-linux.html">Linux</a></nav></div></header>
+<header class="top"><div class="wrap"><a class="brand" href="index.html"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#0b5d56"/><rect x="8" y="6" width="12" height="16" rx="1.6" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M11 11h6M11 14.2h6M11 17.4h3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg><span>Fiches réseau &amp; cyber</span><small>par Jarod Capella</small></a><nav class="nav" aria-label="Navigation principale"><a href="index.html" aria-current="page">Accueil</a><a href="bts.html">BTS</a><a href="bachelor-but.html">BUT et Bachelor</a><a href="master.html">Master et ingénieur</a></nav></div></header>
 <main id="contenu">
 <section class="hero"><div class="wrap"><span class="kicker">Révision · Réseaux · Cybersécurité</span>
-<h1>Les fiches que l'on voudrait avoir sous la main en alternance</h1>
-<p class="lead">Des fiches courtes, exactes et sourcées sur les bases du réseau, de Linux et de la cybersécurité. Une page par sujet, lisible sur mobile, propre à l'impression.</p>
+<h1>Des fiches de révision classées par diplôme, du BTS au Master</h1>
+<p class="lead">Choisissez votre niveau. Chaque fiche dit à quel programme elle correspond et ce qui est vérifié ou non : pas de promesse sur un programme que je n'ai pas lu.</p>
 <div class="meta-line"><span>4 fiches gratuites</span><span>Sources citées</span><span>Sans inscription ni cookie</span></div></div></section>
-<section class="s"><div class="wrap"><h2>Les fiches</h2><p class="sub">Chaque fiche tient en un écran ou deux. Les valeurs par défaut sont indiquées comme telles : une configuration peut toujours s'en écarter.</p>
-<div class="guides"><a class="guide" href="fiche-ports.html"><span>Fiche 1</span><h3>Ports et protocoles courants</h3><p>Ports par défaut des services les plus rencontrés en réseaux et cybersécurité (registre IANA).</p></a><a class="guide" href="fiche-osi.html"><span>Fiche 2</span><h3>Modèles OSI et TCP/IP</h3><p>Les modèles OSI et TCP/IP côte à côte : couches, rôles, protocoles.</p></a><a class="guide" href="fiche-cidr.html"><span>Fiche 3</span><h3>Sous-réseaux et notation CIDR</h3><p>Sous-réseaux et notation CIDR : lire un masque, calculer plages et hôtes.</p></a><a class="guide" href="fiche-linux.html"><span>Fiche 4</span><h3>Commandes Linux essentielles</h3><p>Les commandes Linux essentielles pour l&#x27;administration et la cybersécurité.</p></a></div></div></section>
-<section class="s alt"><div class="wrap"><h2>Quelles fiches ensuite ?</h2><p class="sub">Les prochains thèmes dépendent de ce qui vous manque : cryptographie, Active Directory, pare-feu, journalisation… Dites-moi lesquels, par e-mail : <a href="mailto:businessia.jc@gmail.com">businessia.jc@gmail.com</a>.</p>
-<div class="method"><h3>Comment ces fiches sont construites</h3><p>Les valeurs normatives viennent de sources de référence (registre IANA, RFC), pas de recopies de blogs. Quand un point dépend de la configuration ou du fournisseur, la fiche le dit.</p></div></div></section>
+<section class="s"><div class="wrap"><h2>Choisissez votre niveau</h2>
+<p class="sub">Les trois niveaux sont ouverts ; le contenu s'enrichit selon vos demandes.</p>
+<div class="cols3">
+<div class="c1"><h3><span>BAC+2 · 4 fiches</span>BTS</h3><p>BTS SIO option SISR et BTS CIEL option A informatique et réseaux : les bases réseau, adressage et Linux.</p><p style="margin-top:12px"><a href="bts.html"><strong>Voir les fiches BTS →</strong></a></p></div>
+<div class="c2"><h3><span>BAC+3 · 4 fiches</span>BUT et Bachelor</h3><p>B.U.T. Réseaux et Télécommunications avec correspondance vérifiée sur le programme national, ressource par ressource.</p><p style="margin-top:12px"><a href="bachelor-but.html"><strong>Voir les fiches BUT →</strong></a></p></div>
+<div class="c3"><h3><span>BAC+5 · en préparation</span>Master et ingénieur</h3><p>Cryptographie, Active Directory, pare-feu, journalisation : thèmes prévus, ordre selon vos demandes.</p><p style="margin-top:12px"><a href="master.html"><strong>Voir les thèmes →</strong></a></p></div>
+</div></div></section>
+<section class="s alt"><div class="wrap"><h2>Toutes les fiches</h2>
+<p class="sub">Chaque fiche tient en un écran ou deux. Les valeurs par défaut sont indiquées comme telles : une configuration peut toujours s'en écarter.</p>
+<div class="guides"><a class="guide" href="fiche-ports.html"><span>Fiche 1 · Bac+2</span><h3>Ports et protocoles courants</h3><p>Ports par défaut des services les plus rencontrés en réseaux et cybersécurité (registre IANA).</p><div class="levels"><span class="tag t2">BTS</span><span class="tag t3">BUT R&amp;T</span></div></a><a class="guide" href="fiche-osi.html"><span>Fiche 2 · Bac+2</span><h3>Modèles OSI et TCP/IP</h3><p>Les modèles OSI et TCP/IP côte à côte : couches, rôles, protocoles.</p><div class="levels"><span class="tag t2">BTS</span><span class="tag t3">BUT R&amp;T</span></div></a><a class="guide" href="fiche-cidr.html"><span>Fiche 3 · Bac+2</span><h3>Sous-réseaux et notation CIDR</h3><p>Sous-réseaux et notation CIDR : lire un masque, calculer plages et hôtes.</p><div class="levels"><span class="tag t2">BTS</span><span class="tag t3">BUT R&amp;T</span></div></a><a class="guide" href="fiche-linux.html"><span>Fiche 4 · Bac+2</span><h3>Commandes Linux essentielles</h3><p>Les commandes Linux essentielles pour l&#x27;administration et la cybersécurité.</p><div class="levels"><span class="tag t2">BTS</span><span class="tag t3">BUT R&amp;T</span></div></a></div></div></section>
+<section class="s"><div class="wrap method"><h2>Ce qui est vérifié, et ce qui ne l'est pas</h2>
+<h3>Vérifié</h3><p>La correspondance avec le B.U.T. Réseaux et Télécommunications : elle est relevée dans le programme national publié par le ministère (ressources R1.01, R1.02, R1.08, R2.01). Les blocs du BTS SIO sont tirés d'un document de l'Inspection générale.</p>
+<h3>Non vérifié</h3><p>La correspondance exacte avec les référentiels des BTS SIO et CIEL, et avec les bachelors, dont les programmes varient selon l'établissement. Les fiches y sont utiles comme bases du domaine, rien de plus.</p>
+<h3>Une demande ?</h3><p>Dites-moi quelles fiches vous manquent et pour quelle formation : <a href="mailto:businessia.jc@gmail.com">businessia.jc@gmail.com</a>.</p></div></section>
 </main>
 <footer class="foot"><div class="wrap"><div class="g">
 <div><h4>Fiches réseau &amp; cyber</h4><p>Fiches de révision courtes pour étudiants et alternants en informatique, réseaux et cybersécurité. À imprimer ou à garder sur mobile.</p><p>Édité par Jarod Capella, Foix (09), France.</p></div>
-<div><h4>Pages</h4><ul><li><a href="index.html">Toutes les fiches</a></li><li><a href="fiche-ports.html">Ports</a></li><li><a href="fiche-osi.html">OSI / TCP-IP</a></li><li><a href="fiche-cidr.html">CIDR</a></li><li><a href="fiche-linux.html">Linux</a></li></ul></div>
+<div><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="bts.html">BTS</a></li><li><a href="bachelor-but.html">BUT et Bachelor</a></li><li><a href="master.html">Master et ingénieur</a></li></ul></div>
 <div><h4>Méthode et sources</h4><ul><li><a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml" rel="noopener">Registre des ports IANA</a></li></ul><p style="margin-top:8px">Les ports indiqués sont les valeurs par défaut attribuées par l&#x27;IANA ; une configuration peut en choisir d&#x27;autres.</p></div>
 </div>
 <div class="legal"><p>Information générale, ni audit de sécurité ni conseil professionnel. Aucun cookie, aucune donnée enregistrée. <a href="mentions.html">Mentions légales</a> · <a href="mailto:businessia.jc@gmail.com">Contact</a> · Mis à jour le 2 novembre 2026.</p></div>

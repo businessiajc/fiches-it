@@ -192,12 +192,19 @@ section.s.alt{background:var(--band)}
 .aside .card:first-child{border-top:4px solid var(--c2)}.aside .card.related{border-top:4px solid var(--c3)}
 .foot{border-top:4px solid var(--ac)}
 
+/* Niveaux d'études */
+.levels{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 4px}
+.tag{display:inline-block;font:700 .72rem/1 var(--sans);letter-spacing:.03em;padding:6px 10px;border-radius:999px;text-decoration:none;background:var(--ac-soft);color:var(--ac)}
+.tag.t2{background:var(--ac-soft);color:var(--ac)}.tag.t3{background:var(--c2-soft);color:var(--c2)}.tag.t5{background:var(--c3-soft);color:var(--c3)}
+a.tag:hover{filter:brightness(.95);text-decoration:none}
+.levnote{margin:2px 0 22px;font-size:.82rem}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#contenu">Aller au contenu</a>
-<header class="top"><div class="wrap"><a class="brand" href="index.html"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#0b5d56"/><rect x="8" y="6" width="12" height="16" rx="1.6" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M11 11h6M11 14.2h6M11 17.4h3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg><span>Fiches réseau &amp; cyber</span><small>par Jarod Capella</small></a><nav class="nav" aria-label="Navigation principale"><a href="index.html">Toutes les fiches</a><a href="fiche-ports.html" aria-current="page">Ports</a><a href="fiche-osi.html">OSI / TCP-IP</a><a href="fiche-cidr.html">CIDR</a><a href="fiche-linux.html">Linux</a></nav></div></header>
-<main id="contenu" class="page"><div class="wrap"><div class="crumbs"><a href="index.html">Fiches réseau &amp; cyber</a> / Fiche 1 — Ports et protocoles courants</div><div class="layout"><article class="prose"><h1>Fiche 1 — Ports et protocoles courants</h1><p class="byline">Par Jarod Capella · Mis à jour le 2 novembre 2026 · 1 min de lecture</p>
+<header class="top"><div class="wrap"><a class="brand" href="index.html"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#0b5d56"/><rect x="8" y="6" width="12" height="16" rx="1.6" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M11 11h6M11 14.2h6M11 17.4h3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg><span>Fiches réseau &amp; cyber</span><small>par Jarod Capella</small></a><nav class="nav" aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="bts.html">BTS</a><a href="bachelor-but.html">BUT et Bachelor</a><a href="master.html">Master et ingénieur</a></nav></div></header>
+<main id="contenu" class="page"><div class="wrap"><div class="crumbs"><a href="index.html">Fiches réseau &amp; cyber</a> / Fiche 1 — Ports et protocoles courants</div><div class="layout"><article class="prose"><h1>Fiche 1 — Ports et protocoles courants</h1><p class="byline">Par Jarod Capella · Mis à jour le 2 novembre 2026 · 1 min de lecture</p><div class="levels"><a class="tag t2" href="bts.html">BTS SIO (SISR)</a><a class="tag t2" href="bts.html">BTS CIEL (option A)</a><a class="tag t3" href="bachelor-but.html">BUT R&amp;T 1re année</a></div><p class="mut levnote">BUT R&amp;T : correspondance relevée dans le programme national (R1.02, R2.01). BTS : Correspondance exacte avec le référentiel du diplôme : non vérifiée à ce jour. Ces fiches portent sur des bases communes du domaine ; confirmez avec le programme de votre année.</p><div class="levels"><a class="tag t2" href="bts.html">BTS SIO (SISR)</a><a class="tag t2" href="bts.html">BTS CIEL (option A)</a><a class="tag t3" href="bachelor-but.html">BUT R&amp;T 1re année</a></div><p class="mut levnote">BUT R&amp;T : correspondance relevée dans le programme national (R1.02, R2.01). BTS : Correspondance exacte avec le référentiel du diplôme : non vérifiée à ce jour. Ces fiches portent sur des bases communes du domaine ; confirmez avec le programme de votre année.</p>
 <p>Ports par défaut attribués par l'IANA aux services les plus rencontrés en réseaux et en cybersécurité. Un service peut être configuré sur un autre port.</p>
 <table><tr><th>Port</th><th>Transport</th><th>Service</th></tr>
 <tr><td>21</td><td>TCP</td><td>FTP (commandes)</td></tr><tr><td>22</td><td>TCP</td><td>SSH</td></tr><tr><td>23</td><td>TCP</td><td>Telnet (non chiffré)</td></tr>
@@ -209,14 +216,26 @@ section.s.alt{background:var(--band)}
 <tr><td>514</td><td>UDP</td><td>Syslog</td></tr><tr><td>587</td><td>TCP</td><td>Soumission de courrier (client vers serveur)</td></tr>
 <tr><td>636</td><td>TCP</td><td>LDAPS</td></tr><tr><td>993</td><td>TCP</td><td>IMAPS</td></tr><tr><td>995</td><td>TCP</td><td>POP3S</td></tr>
 <tr><td>3306</td><td>TCP</td><td>MySQL / MariaDB</td></tr><tr><td>3389</td><td>TCP</td><td>RDP</td></tr><tr><td>5432</td><td>TCP</td><td>PostgreSQL</td></tr></table>
-<div class="box"><strong>Réflexe cyber :</strong> tout port ouvert vers Internet doit avoir une raison. Telnet (23) et FTP (21) transmettent les identifiants en clair : préférez SSH (22) et des variantes chiffrées.</div></article><aside class="aside"><div class="card related"><h4>À lire aussi</h4><a href="fiche-osi.html">OSI / TCP-IP</a><a href="fiche-cidr.html">CIDR</a><a href="fiche-linux.html">Linux</a><a href="index.html">← Toutes les fiches</a></div></aside></div></div></main>
+<div class="box"><strong>Réflexe cyber :</strong> tout port ouvert vers Internet doit avoir une raison. Telnet (23) et FTP (21) transmettent les identifiants en clair : préférez SSH (22) et des variantes chiffrées.</div></article><aside class="aside"><div class="card related"><h4>À lire aussi</h4><a href="fiche-osi.html">Modèles OSI et TCP/IP</a><a href="fiche-cidr.html">Sous-réseaux et CIDR</a><a href="fiche-linux.html">Commandes Linux</a><a href="index.html">← Retour à l’accueil</a></div></aside></div></div></main>
 <footer class="foot"><div class="wrap"><div class="g">
 <div><h4>Fiches réseau &amp; cyber</h4><p>Fiches de révision courtes pour étudiants et alternants en informatique, réseaux et cybersécurité. À imprimer ou à garder sur mobile.</p><p>Édité par Jarod Capella, Foix (09), France.</p></div>
-<div><h4>Pages</h4><ul><li><a href="index.html">Toutes les fiches</a></li><li><a href="fiche-ports.html">Ports</a></li><li><a href="fiche-osi.html">OSI / TCP-IP</a></li><li><a href="fiche-cidr.html">CIDR</a></li><li><a href="fiche-linux.html">Linux</a></li></ul></div>
+<div><h4>Pages</h4><ul><li><a href="index.html">Accueil</a></li><li><a href="bts.html">BTS</a></li><li><a href="bachelor-but.html">BUT et Bachelor</a></li><li><a href="master.html">Master et ingénieur</a></li></ul></div>
 <div><h4>Méthode et sources</h4><ul><li><a href="https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml" rel="noopener">Registre des ports IANA</a></li></ul><p style="margin-top:8px">Les ports indiqués sont les valeurs par défaut attribuées par l&#x27;IANA ; une configuration peut en choisir d&#x27;autres.</p></div>
 </div>
 <div class="legal"><p>Information générale, ni audit de sécurité ni conseil professionnel. Aucun cookie, aucune donnée enregistrée. <a href="mentions.html">Mentions légales</a> · <a href="mailto:businessia.jc@gmail.com">Contact</a> · Mis à jour le 2 novembre 2026.</p></div>
 </div></footer>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(function(h){o.observe(h)})})();
+</script>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(function(h){o.observe(h)})})();
+</script>
 <script>
 (function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
 var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
