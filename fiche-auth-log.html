@@ -207,7 +207,7 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 <main id="contenu" class="page"><div class="wrap"><div class="crumbs"><a href="index.html">Fiches réseau &amp; cyber</a> / Fiche 6 — Lire auth.log : connexions SSH et force brute</div><div class="layout"><article class="prose"><h1>Fiche 6 — Lire auth.log : connexions SSH et force brute</h1><p class="byline">Par Jarod Capella · Mis à jour le 3 novembre 2026 · 3 min de lecture</p>
 <p>Sur un serveur exposé à Internet, le service SSH reçoit des tentatives de connexion automatisées en permanence. Savoir lire le journal d'authentification permet de repérer une attaque par force brute ou une connexion qui n'aurait pas dû avoir lieu.</p>
 
-<h2 id="ou-se-trouve-le-journal">Où se trouve le journal</h2>
+<h2 id="ou-se-trouve-le-journal" id="ou-se-trouve-le-journal" id="ou-se-trouve-le-journal" id="ou-se-trouve-le-journal">Où se trouve le journal</h2>
 <table>
 <thead><tr><th>Système</th><th>Emplacement</th></tr></thead>
 <tbody>
@@ -217,7 +217,7 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 </tbody></table>
 <p>Le nom du service (<code>ssh</code> ou <code>sshd</code>) varie selon la distribution.</p>
 
-<h2 id="anatomie-d-une-ligne">Anatomie d'une ligne</h2>
+<h2 id="anatomie-d-une-ligne" id="anatomie-d-une-ligne" id="anatomie-d-une-ligne" id="anatomie-d-une-ligne">Anatomie d'une ligne</h2>
 <pre><code>Nov  3 10:12:41 srv01 sshd[2217]: Failed password for invalid user admin from 203.0.113.45 port 51822 ssh2</code></pre>
 <ul>
 <li><strong>Nov 3 10:12:41</strong> : date et heure locales de l'événement.</li>
@@ -228,7 +228,7 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 </ul>
 <p>L'adresse 203.0.113.45 est une adresse réservée à la documentation (RFC 5737) : elle sert ici d'exemple.</p>
 
-<h2 id="messages-a-connaitre">Messages à connaître</h2>
+<h2 id="messages-a-connaitre" id="messages-a-connaitre" id="messages-a-connaitre" id="messages-a-connaitre">Messages à connaître</h2>
 <table>
 <thead><tr><th>Message</th><th>Signification</th></tr></thead>
 <tbody>
@@ -243,7 +243,7 @@ a.tag:hover{filter:brightness(.95);text-decoration:none}
 </tbody></table>
 <p>Le libellé exact peut différer légèrement d'une version d'OpenSSH à l'autre : repérez le sens, pas la phrase mot pour mot.</p>
 
-<h2 id="commandes-d-analyse">Commandes d'analyse</h2>
+<h2 id="commandes-d-analyse" id="commandes-d-analyse" id="commandes-d-analyse" id="commandes-d-analyse">Commandes d'analyse</h2>
 <pre><code># Les 20 derniers échecs
 grep "Failed password" /var/log/auth.log | tail -n 20
 
@@ -264,7 +264,7 @@ last -n 10
 sudo lastb -n 10</code></pre>
 <p>Dans la deuxième commande, une même adresse avec des centaines d'échecs en quelques minutes est le signe d'une attaque par force brute. Le numéro de colonne de la troisième commande (<code>$8</code>) dépend du format de la ligne : vérifiez-le sur une ligne réelle.</p>
 
-<h2 id="que-faire-en-cas-de-force-brute">Que faire en cas de force brute</h2>
+<h2 id="que-faire-en-cas-de-force-brute" id="que-faire-en-cas-de-force-brute" id="que-faire-en-cas-de-force-brute" id="que-faire-en-cas-de-force-brute">Que faire en cas de force brute</h2>
 <ol>
 <li>Vérifier qu'aucune ligne <code>Accepted</code> ne suit les échecs depuis la même adresse : si c'est le cas, le compte est peut-être compromis, il faut changer ses identifiants et investiguer.</li>
 <li>Désactiver l'authentification par mot de passe et n'autoriser que les clés SSH (<code>PasswordAuthentication no</code> dans <code>/etc/ssh/sshd_config</code>), puis recharger le service.</li>
@@ -273,7 +273,7 @@ sudo lastb -n 10</code></pre>
 </ol>
 <p>Avant de modifier la configuration SSH d'un serveur distant, gardez une session ouverte et testez la nouvelle connexion dans un second terminal : une erreur peut vous en bloquer l'accès.</p>
 
-<h2 id="a-retenir">À retenir</h2>
+<h2 id="a-retenir" id="a-retenir" id="a-retenir" id="a-retenir">À retenir</h2>
 <ul>
 <li>Un échec isolé n'est pas une attaque ; une répétition rapide depuis une même source l'est.</li>
 <li><code>Accepted</code> après une série de <code>Failed</code> est la ligne la plus importante à vérifier.</li>
@@ -288,6 +288,23 @@ sudo lastb -n 10</code></pre>
 <div class="legal"><p>Information générale, ni audit de sécurité ni conseil professionnel. Aucun cookie, aucune donnée enregistrée. <a href="mentions.html">Mentions légales</a> · <a href="mailto:businessia.jc@gmail.com">Contact</a> · Mis à jour le 3 novembre 2026.</p></div>
 </div></footer>
 <script>
+(function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(function(h){o.observe(h)})})();
+</script>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(function(h){o.observe(h)})})();
+</script>
+<script>
+(function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
+var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
+var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('.prose h2[id]').forEach(function(h){o.observe(h)})})();
+</script><script>
 (function(){var l=[].slice.call(document.querySelectorAll('.aside .toc a'));if(!l.length||!('IntersectionObserver' in window))return;
 var m={};l.forEach(function(a){m[a.getAttribute('href').slice(1)]=a});
 var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){l.forEach(function(a){a.classList.remove('on')});var a=m[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-10% 0px -80% 0px'});
